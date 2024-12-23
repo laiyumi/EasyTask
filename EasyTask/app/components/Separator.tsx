@@ -1,12 +1,11 @@
-import React from "react";
-import { View, StyleSheet, FlatList } from "react-native";
-import colors from "../config/Colors";
+import { StyleSheet, View } from "react-native";
+import defaultStyle from "../config/styles";
 
 const styles = StyleSheet.create({
   separator: {
     height: 1,
     width: "100%",
-    backgroundColor: colors.light,
+    backgroundColor: defaultStyle.colors.light,
   },
 });
 

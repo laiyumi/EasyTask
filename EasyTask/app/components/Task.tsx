@@ -1,10 +1,9 @@
 import { StyleSheet, Text, TouchableHighlight, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import ReanimatedSwipeable from "react-native-gesture-handler/ReanimatedSwipeable";
-import colors from "../config/Colors";
-import { TaskStatus } from "../screens/TaskListScreen";
-import TaskDeleteAction from "./TaskDeleteAction";
 import { SharedValue } from "react-native-reanimated";
+import defaultStyle from "../config/styles";
+import { TaskStatus } from "../screens/TaskListScreen";
 
 const styles = StyleSheet.create({
   container: {
@@ -13,22 +12,22 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingVertical: 10,
     width: "100%",
-    backgroundColor: colors.white,
+    backgroundColor: defaultStyle.colors.white,
   },
   title: {
     marginLeft: 10,
     marginRight: 10,
   },
   status: {
-    backgroundColor: colors.accent,
+    backgroundColor: defaultStyle.colors.accent,
     borderRadius: 50,
     padding: 5,
   },
-  swipeable: {
-    height: 50,
-    backgroundColor: "papayawhip",
-    alignItems: "center",
-  },
+  // swipeable: {
+  //   height: 50,
+  //   backgroundColor: "papayawhip",
+  //   alignItems: "center",
+  // },
 });
 
 interface TaskProps {
@@ -45,7 +44,10 @@ function Task({ title, status, onPress, renderRightActions }: TaskProps) {
   return (
     <GestureHandlerRootView>
       <ReanimatedSwipeable renderRightActions={renderRightActions}>
-        <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
+        <TouchableHighlight
+          underlayColor={defaultStyle.colors.light}
+          onPress={onPress}
+        >
           <View style={styles.container}>
             <Text style={styles.title}>{title}</Text>
             <Text style={styles.status}>{status}</Text>

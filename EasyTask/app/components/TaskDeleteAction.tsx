@@ -1,17 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
-import Reanimated, {
-  SharedValue,
-  useAnimatedStyle,
-} from "react-native-reanimated";
-import colors from "../config/Colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { StyleSheet, View } from "react-native";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
+import colors from "../config/Colors";
+import defaultStyle from "../config/styles";
 
 const styles = StyleSheet.create({
   container: {
     width: 50,
     height: 50,
-    backgroundColor: colors.danger,
+    backgroundColor: defaultStyle.colors.danger,
     justifyContent: "center",
     alignItems: "center",
   },

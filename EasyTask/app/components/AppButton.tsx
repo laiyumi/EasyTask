@@ -1,16 +1,9 @@
-import React from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  Touchable,
-  TouchableOpacity,
-} from "react-native";
-import colors from "../config/Colors";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import defaultStyle from "../config/styles";
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: colors.secondary,
+    backgroundColor: defaultStyle.colors.secondary,
     borderRadius: 25,
     justifyContent: "center",
     alignItems: "center",
@@ -18,7 +11,7 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   text: {
-    color: colors.white,
+    color: defaultStyle.colors.white,
     fontSize: 18,
     textTransform: "uppercase",
     fontWeight: "bold",

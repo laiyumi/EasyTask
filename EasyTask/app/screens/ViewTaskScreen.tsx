@@ -1,6 +1,5 @@
-import React from "react";
-import { View, StyleSheet } from "react-native";
-import colors from "../config/Colors";
+import { StyleSheet, View } from "react-native";
+import defaultStyle from "../config/styles";
 
 const styles = StyleSheet.create({
   container: {
@@ -11,7 +10,7 @@ const styles = StyleSheet.create({
   closeIcon: {
     width: 50,
     height: 50,
-    backgroundColor: colors.primary,
+    backgroundColor: defaultStyle.colors.primary,
     position: "absolute",
     top: 40,
     left: 30,
@@ -19,7 +18,7 @@ const styles = StyleSheet.create({
   deleteIcon: {
     width: 50,
     height: 50,
-    backgroundColor: colors.secondary,
+    backgroundColor: defaultStyle.colors.secondary,
     position: "absolute",
     top: 40,
     right: 30,
