@@ -14,9 +14,9 @@ import {
 import { useDeviceOrientation } from "@react-native-community/hooks";
 import WelcomeScreen from "./screens/WelcomeScreen";
 import ViewTaskScreen from "./screens/ViewTaskScreen";
-import AppText from "./components/AppText";
 import TaskListScreen from "./screens/TaskListScreen";
-import NewTaskInput from "./components/NewTaskInput";
+import CreateTaskScreen from "./screens/CreateTaskScreen";
+import LoginScreen from "./screens/LoginScreen";
 
 const styles = StyleSheet.create({
   container: {
@@ -40,6 +40,7 @@ export default function Index() {
     // <ViewTaskScreen />
     // <NewTaskIcon />
     // <TaskListScreen />
-    <NewTaskInput placeholder="Title" />
+    // <CreateTaskScreen />
+    <LoginScreen />
   );
 }

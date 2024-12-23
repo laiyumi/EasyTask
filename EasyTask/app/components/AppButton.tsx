@@ -20,14 +20,12 @@ const styles = StyleSheet.create({
 
 interface AppButtonProps {
   title: string;
+  onPress: () => void;
 }
 
-function AppButton({ title }: AppButtonProps) {
+function AppButton({ title, onPress }: AppButtonProps) {
   return (
-    <TouchableOpacity
-      style={styles.button}
-      onPress={() => console.log("Button pressed")}
-    >
+    <TouchableOpacity style={styles.button} onPress={onPress}>
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   );
