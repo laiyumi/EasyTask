@@ -16,6 +16,7 @@ import WelcomeScreen from "./screens/WelcomeScreen";
 import ViewTaskScreen from "./screens/ViewTaskScreen";
 import AppText from "./components/AppText";
 import TaskListScreen from "./screens/TaskListScreen";
+import NewTaskInput from "./components/NewTaskInput";
 
 const styles = StyleSheet.create({
   container: {
@@ -38,6 +39,7 @@ export default function Index() {
     // <WelcomeScreen />
     // <ViewTaskScreen />
     // <NewTaskIcon />
-    <TaskListScreen />
+    // <TaskListScreen />
+    <NewTaskInput placeholder="Title" />
   );
 }
